@@ -8,12 +8,12 @@ use serde_derive::*;
 #[derive(Serialize)]
 struct Request {
     #[serde(rename = "seriesPid")]
-    series_id: SeriesId,
+    pub series_id: SeriesId,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    items: Vec<Item>,
+    pub items: Vec<Item>,
 }
 
 #[derive(Debug, Deserialize)]

@@ -8,21 +8,21 @@ use serde_derive::*;
 #[derive(Serialize)]
 struct Request {
     #[serde(rename = "productId")]
-    single_id: SingleId,
+    pub single_id: SingleId,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    aid: String,
+    pub aid: String,
     #[serde(rename = "downloadData.members")]
-    download_data: DonwloadData,
+    pub download_data: DonwloadData,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct DonwloadData {
     #[serde(rename = "camelCase")]
-    total_size: u64,
-    slide: Vec<File>,
+    pub total_size: u64,
+    pub slide: Vec<File>,
 }
 
 #[derive(Debug, Deserialize)]

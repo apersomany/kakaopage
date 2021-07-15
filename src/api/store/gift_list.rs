@@ -7,14 +7,14 @@ use serde_derive::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    list: Vec<Gift>,
+    pub list: Vec<Gift>,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Gift {
-    id: SeriesId,
+    pub id: SeriesId,
     #[serde(rename = "today_gift_uid")]
-    gift_id: GiftId,
+    pub gift_id: GiftId,
 }
 
 pub async fn gift_list(client: &Client, account: &Account) -> Result<Response> {

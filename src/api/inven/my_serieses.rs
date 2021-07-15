@@ -4,7 +4,7 @@ use serde_derive::*;
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    items: Vec<Item>,
+    pub items: Vec<Item>,
 }
 
 #[derive(Debug, Deserialize)]

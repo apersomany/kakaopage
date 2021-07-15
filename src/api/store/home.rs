@@ -8,14 +8,14 @@ use serde_derive::*;
 
 #[derive(Serialize)]
 struct Request {
-    seriesid: SeriesId,
+    pub seriesid: SeriesId,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    home: Home,
-    free_desc: String,
-    first_single_id: SingleId,
+    pub home: Home,
+    pub free_desc: String,
+    pub first_single_id: SingleId,
 }
 
 #[derive(Debug, Deserialize)]

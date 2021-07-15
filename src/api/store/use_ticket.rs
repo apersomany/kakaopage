@@ -13,12 +13,12 @@ struct Request {
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    welcome_rent_ticket: Option<u64>,
-    rent_ticket: Option<u64>,
-    welcome_buy_ticket: Option<u64>,
-    buy_ticket: Option<u64>,
-    event_ticket: Option<u64>,
-    waitfree_charged_at: Option<String>,
+    pub welcome_rent_ticket: Option<u64>,
+    pub rent_ticket: Option<u64>,
+    pub welcome_buy_ticket: Option<u64>,
+    pub buy_ticket: Option<u64>,
+    pub event_ticket: Option<u64>,
+    pub waitfree_charged_at: Option<String>,
 }
 
 pub async fn use_ticket(

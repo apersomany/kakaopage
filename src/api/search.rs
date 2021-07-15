@@ -14,28 +14,28 @@ struct Request<'a> {
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    current_category: Category,
-    results: Vec<SearchResult>,
+    pub current_category: Category,
+    pub results: Vec<SearchResult>,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct SearchResult {
-    total_count: u64,
-    is_end: bool,
-    items: Vec<Item>,
+    pub total_count: u64,
+    pub is_end: bool,
+    pub items: Vec<Item>,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Item {
-    id: SeriesId,
-    title: String,
-    author: String,
-    publisher_name: String,
-    read_count: u64,
-    category_uid: Category,
-    category: String,
-    sub_category: String,
-    image_url: FileId,
+    pub id: SeriesId,
+    pub title: String,
+    pub author: String,
+    pub publisher_name: String,
+    pub read_count: u64,
+    pub category_uid: Category,
+    pub category: String,
+    pub sub_category: String,
+    pub image_url: FileId,
 }
 
 pub async fn search(client: &Client, keyword: &str, page: u64) -> Result<Response> {

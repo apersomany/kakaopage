@@ -15,17 +15,17 @@ struct Request {
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    total_count: u64,
-    is_end: bool,
-    singles: Vec<Single>,
+    pub total_count: u64,
+    pub is_end: bool,
+    pub singles: Vec<Single>,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Single {
-    id: SingleId,
-    title: String,
-    image_url: FileId,
-    order_value: u64,
+    pub id: SingleId,
+    pub title: String,
+    pub image_url: FileId,
+    pub order_value: u64,
 }
 
 pub async fn singles(

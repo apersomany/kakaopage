@@ -13,16 +13,16 @@ struct Request {
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
-    welcome_rent_ticket: u64,
-    rent_ticket: u64,
-    welcome_buy_ticket: u64,
-    buy_ticket: u64,
-    event_ticket: u64,
-    charged_at: String,
+    pub welcome_rent_ticket: u64,
+    pub rent_ticket: u64,
+    pub welcome_buy_ticket: u64,
+    pub buy_ticket: u64,
+    pub event_ticket: u64,
+    pub charged_at: String,
     #[serde(deserialize_with = "yn_bool")]
-    waitfree: bool,
+    pub waitfree: bool,
     #[serde(deserialize_with = "yn_bool")]
-    user_activation: bool,
+    pub user_activation: bool,
 }
 
 pub async fn view_ticket(

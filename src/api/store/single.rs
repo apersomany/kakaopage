@@ -8,19 +8,19 @@ use serde_derive::*;
 
 #[derive(Serialize)]
 struct Request {
-    singleid: SingleId,
+    pub singleid: SingleId,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Response {
     #[serde(deserialize_with = "yn_bool")]
-    allow_waitfree_ticket: bool,
-    single: Single,
+    pub allow_waitfree_ticket: bool,
+    pub single: Single,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Single {
-    epub_viewer_id: FileId,
+    pub epub_viewer_id: FileId,
 }
 
 pub async fn single(client: &Client, account: &Account, single_id: SingleId) -> Result<Response> {
