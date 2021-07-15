@@ -2,7 +2,7 @@ use crate::IMG_URL;
 use serde_derive::*;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct FileId(String);
+pub struct FileId(pub String);
 
 impl FileId {
     pub fn get_url(&self) -> Option<String> {
