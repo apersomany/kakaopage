@@ -45,7 +45,7 @@ pub mod models {
 pub mod client;
 
 pub mod util {
-    pub(crate) mod derive_key;
+    pub mod derive_key;
 }
 
 fn timestamp() -> u64 {
