@@ -20,19 +20,19 @@ pub struct Response {
 
 #[derive(Debug, Deserialize)]
 pub struct Home {
-    id: SeriesId,
-    title: String,
-    author_name: String,
-    publisher_name: String,
-    description: String,
-    read_count: u64,
-    category_uid: Category,
-    category: String,
-    sub_category: String,
-    image_url: FileId,
-    pub_period: String,
-    page_rating_count: u64,
-    page_rating_summary: f64,
+    pub id: SeriesId,
+    pub title: String,
+    pub author_name: String,
+    pub publisher_name: String,
+    pub description: String,
+    pub read_count: u64,
+    pub category_uid: Category,
+    pub category: String,
+    pub sub_category: String,
+    pub image_url: FileId,
+    pub pub_period: String,
+    pub page_rating_count: u64,
+    pub page_rating_summary: f64,
 }
 
 pub async fn home(client: &Client, series_id: SeriesId) -> Result<Response> {
